@@ -7,6 +7,5 @@ function view(string $view, array $data=[]){
 
     $templates = new League\Plates\Engine($path);
 
-    // Render a template
     echo $templates->render($view,$data);
 }
