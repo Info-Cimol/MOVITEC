@@ -16,7 +16,7 @@
     <nav class="navbar navbar-expand-lg navbar-white text-white fixed-top ">
         <div class="container">
             <a class="navbar-brand text-white" href="/">MOVITEC</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -41,8 +41,8 @@
         <div class="containerimg p-4">
             <img class="imgfundo text-bg-primary" src="./midias/tecnologia.jpg" alt="">
             <div class="textoimg">
-                <h2 class="fs-1 fw-bold text-white ">Mostra Virtual Tecnológica</h2>
-                <h3 class="fs-2 fw-bold text-info">Prepare-se para a MOVITEC 2024!</h3>
+                <h2 class="fs-2 fw-bold text-white ">Mostra Virtual Tecnológica</h2>
+                <h3 class="fs-3 fw-bold text-info">Prepare-se para a MOVITEC 2024!</h3>
                 <p>Submissões de trabalhos: de 6 a 11 de maio</p>
             </div>
         </div>
@@ -54,66 +54,42 @@
                     estudantes do curso técnico em informática da Escola Técnica Estadual Monteiro Lobato.</p>
                 <p class="text-justify">2. A submissão de trabalho é gratuita e deverá ser feita até a data limite
                     publicada no Cronograma da Mostra virtual tecnológica.</p>
-                <div class="text-center p-5">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/M8KRue0HvQA?si=wbuXymRU4s3KBng3"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
-                </div>
+                    <div class="row justify-content-center">
+                    <div class="video col-8 pb-2">
+                        <div class="video-wrapper">
+                            <iframe 
+                                src="https://www.youtube.com/embed/M8KRue0HvQA?si=wZnniU7ZzR-N9V2q"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>  
+                        </div>
+                    </div>
                 <p>3. Cada estudante da Mostra virtual tecnológica pode inscrever apenas UM projeto de sua autoria. É
                     obrigatória a presença de pelo menos um autor do trabalho no momento da videoconferência para
-                    avaliação que acontece durante a Mostra virtual tecnológica. </p>
+                    avaliação que acontece durante a Mostra virtual tecnológica.</p>
                 <p class="text-justify">4. Os projetos com duração superior a 12 meses, devem informar no ato da
                     inscrição que se tratam de “Projetos de Continuidade do ano anterior”. O início da pesquisa de campo
                     ou da fase experimental ou de prototipagem deverá ser considerado como data inicial do projeto.</p>
-                <ul>
+                <ul style="list-style-type: disc; margin-left: 20px;">
                     <li>Projetos realizados pelos estudantes a partir de trabalhos de outros pesquisadores não são
                         considerados “Continuação de Projeto Anterior”, mas o estudante deverá mostrar claramente os
                         elementos do projeto que ele desenvolveu e quais partes do projeto são de autoria de outro
                         pesquisador citando as devidas fontes.</li>
                 </ul>
-                <p>5. Sobre a ORIGINALIDADE E AUTORIA PRÓPRIA dos trabalhos.</p>
+                <p class="text-justify">5. Sobre a ORIGINALIDADE E AUTORIA PRÓPRIA dos trabalhos.</p>
                 <ul class="text-justify">
-                    <li>Todo trabalho aprovado para participação na Mostra virtual tecnológica deve ser original, de
-                        única e exclusiva autoria das pessoas relacionadas no ato da inscrição e não se tratar de cópia
-                        integral ou parcial de textos e trabalhos de autoria de outrem, seja em formato de papel,
-                        eletrônico, digital, audiovisual ou qualquer outro meio.</li>
-                    <li>Os autores ao inscreverem seus trabalhos na Mostra virtual tecnológica assumem ter total
-                        conhecimento e compreensão do que é considerado plágio, não apenas a cópia integral do trabalho,
-                        mas também parte dele, inclusive de artigos e/ou parágrafos, sem citação do autor ou de sua
-                        fonte.</li>
-                    <li>Trabalhos que possuam conteúdos copiados sem as devidas referências serão desclassificados por
-                        plágio.</li>
+                    <li>Todo trabalho aprovado para participação na Mostra virtual tecnológica deve ser original, de única e exclusiva autoria das pessoas relacionadas no ato da inscrição e não se tratar de cópia integral ou parcial de textos e trabalhos de autoria de outrem, seja em formato de papel, eletrônico, digital, audiovisual ou qualquer outro meio.</li>
+                    <li>Os autores ao inscreverem seus trabalhos na Mostra virtual tecnológica assumem ter total conhecimento e compreensão do que é considerado plágio, não apenas a cópia integral do trabalho, mas também parte dele, inclusive de artigos e/ou parágrafos, sem citação do autor ou de sua fonte.</li>
+                    <li>Trabalhos que possuam conteúdos copiados sem as devidas referências serão desclassificados por plágio.</li>
                 </ul>
-                <p class="text-justify">6. Orientadores podem participar de múltiplos projetos. O orientador deve ser
-                    professor ativo na Escola Técnica Estadual Monteiro Lobato para assumir a orientação do projeto,
-                    preferencialmente com formação na área do tema do projeto.
-                </p>
-                <p>7. Na inscrição dos trabalhos é necessário inserir um resumo da pesquisa contendo OBRIGATORIAMENTE
-                    entre 1500 e 2000 caracteres com espaço. Todos os projetos apresentados na Mostra virtual
-                    tecnológica
-                    terão seus resumos publicados nos Anais do evento.
-                </p>                
-                <p>8. Para a mostra virtual todos os trabalhos deverão elaborar um pôster científico/banner virtual no
-                    formato indicado pela Mostra virtual tecnológica. Este item ficará disponível para visitação pública
-                    virtual e será considerado durante a avaliação dos trabalhos pela comissão de avaliadores. 
-                </p>
-                <p>
-                    9. Para a mostra virtual todos os trabalhos deverão elaborar um Vídeo com a explicação do trabalho.
-                    Este item ficará disponível para visitação pública virtual e será considerado durante a avaliação
-                    dos trabalhos pela comissão de avaliadores.
-                </p>
-                <p>
-                    10. Para a mostra virtual todos os trabalhos deverão elaborar um Relatório científico do trabalho.
-                    Este item ficará disponível para visitação pública virtual e será considerado durante a avaliação
-                    dos trabalhos pela comissão de avaliadores.
-                </p>
-                <p>
-                    11. É opcional a apresentação do Plano de pesquisa e Diário de bordo.
-                </p>
-                <p>
-                    12. Os projetos devem estar categorizados em áreas científicas, conforme as áreas científicas da CAPES/CNPQ.
-                </p>
+                <p class="text-justify">6. Orientadores podem participar de múltiplos projetos. O orientador deve ser professor ativo na Escola Técnica Estadual Monteiro Lobato para assumir a orientação do projeto, preferencialmente com formação na área do tema do projeto.</p>
+                <p>7. Na inscrição dos trabalhos é necessário inserir um resumo da pesquisa contendo OBRIGATORIAMENTE entre 1500 e 2000 caracteres com espaço. Todos os projetos apresentados na Mostra virtual tecnológica terão seus resumos publicados nos Anais do evento.</p>                
+                <p>8. Para a mostra virtual todos os trabalhos deverão elaborar um pôster científico/banner virtual no formato indicado pela Mostra virtual tecnológica. Este item ficará disponível para visitação pública virtual e será considerado durante a avaliação dos trabalhos pela comissão de avaliadores.</p>
+                <p>9. Para a mostra virtual todos os trabalhos deverão elaborar um Vídeo com a explicação do trabalho. Este item ficará disponível para visitação pública virtual e será considerado durante a avaliação dos trabalhos pela comissão de avaliadores.</p>
+                <p>10. Para a mostra virtual todos os trabalhos deverão elaborar um Relatório científico do trabalho. Este item ficará disponível para visitação pública virtual e será considerado durante a avaliação dos trabalhos pela comissão de avaliadores.</p>
+                <p>11. É opcional a apresentação do Plano de pesquisa e Diário de bordo.</p>
+                <p>12. Os projetos devem estar categorizados em áreas científicas, conforme as áreas científicas da CAPES/CNPQ.</p>
                 <ul>
                     <li>Ciências Exatas e da Terra</li>
                     <li>Ciências Biológicas</li>
@@ -264,13 +240,18 @@
                             autor que o sistema irá buscar a pessoa dentre todas previamente cadastradas.</li>
                     </ul>
                     <p class="fw-bold text-center pt-3 pb-2">Vídeo Tutorial sobre a página da mostra</p>
-                    <div class="text-center pb-2">
-                        <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/M8KRue0HvQA?si=wZnniU7ZzR-N9V2q"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
+                    <div class="row justify-content-center">
+                    <div class="video col-8 pb-2">
+                        <div class="video-wrapper">
+                            <iframe 
+                                src="https://www.youtube.com/embed/M8KRue0HvQA?si=wZnniU7ZzR-N9V2q"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>  
+                        </div>
                     </div>
+            </div>
                 </div>
                 <div>
                     <h5 class="passo"><span class="text-info">9.</span> Confirme a participação</h5>
