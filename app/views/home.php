@@ -177,7 +177,8 @@
                         Você pode também organizar uma pasta com fotos, fichas e formulários utilizados na sua pesquisa.
                         Registre todas as etapas realizadas de forma detalhada e precisa (indicando datas e locais)
                         todos os fatos, passos, observações, descobertas, indagações, investigações, entrevistas,
-                        testes, resultados e análises.</p>
+                        testes, resultados e análises.
+                    </p>
                 </div>
                 <div>
                     <h5 class="passo"><span class="text-info">5.</span> Saiba sobre questões éticas/segurança</h5>
@@ -241,7 +242,7 @@
                     </ul>
                     <p class="fw-bold text-center pt-3 pb-2">Vídeo Tutorial sobre a página da mostra</p>
                     <div class="row justify-content-center">
-                    <div class="video col-8 pb-2">
+                    <div class="video col-8 pb-5">
                         <div class="video-wrapper">
                             <iframe 
                                 src="https://www.youtube.com/embed/M8KRue0HvQA?si=wZnniU7ZzR-N9V2q"
@@ -276,21 +277,28 @@
             <div class="row justify-content-around">
                 <div class="card text-center mb-3 border-0 " style="width: 18rem;">
                     <div class="card-body col rounded">
-                        <h5 class="card-title">Rural Market</h5>
+                        <h5 class="card-title fw-bold">Rural Market</h5>
                         <p class="card-text">Site de divulgação de produtos rurais.</p>
                         <a href="/projeto" target="_blank" class="btn btn-primary">Ver o projeto</a>
                     </div>
                 </div>
                 <div class="card text-center mb-3 border-0 " style="width: 18rem;">
                     <div class="card-body col rounded">
-                        <h5 class="card-title">Rural Market</h5>
+                        <h5 class="card-title  fw-bold">Rural Market</h5>
                         <p class="card-text">Site de divulgação de produtos rurais.</p>
                         <a href="/projeto" target="_blank" class="btn btn-primary">Ver o projeto</a>
                     </div>
                 </div>
                 <div class="card text-center mb-3 border-0 " style="width: 18rem;">
                     <div class="card-body col rounded">
-                        <h5 class="card-title">Rural Market</h5>
+                        <h5 class="card-title  fw-bold">Rural Market</h5>
+                        <p class="card-text">Site de divulgação de produtos rurais.</p>
+                        <a href="/projeto" target="_blank" class="btn btn-primary">Ver o projeto</a>
+                    </div>
+                </div>
+                <div class="card text-center mb-3 border-0 " style="width: 18rem;">
+                    <div class="card-body col rounded">
+                        <h5 class="card-title  fw-bold">Rural Market</h5>
                         <p class="card-text">Site de divulgação de produtos rurais.</p>
                         <a href="/projeto" target="_blank" class="btn btn-primary">Ver o projeto</a>
                     </div>
@@ -324,6 +332,9 @@
                                     autor que o sistema irá buscar a pessoa dentre todas previamente cadastradas.
                                 </li>
                             </ul>
+                            <div class="col-md-6 offset-md-3 text-center mt-5">
+                                <a href="/inscricao" class="col justify-content-center btn btn-primary btn-lg btn-inscricao btn-custom">FAÇA SUA INSCRIÇÃO!</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -334,7 +345,7 @@
         <section id="tutoriais">
         <h2 class="text-center p-3 fw-bold fs-1 shadow mb-5">Tutoriais</h2>
             <div class="row justify-content-evenly">
-                <div class="video col-5 pb-2">
+                <div class="video col-6 col-lg-4 col-md-6 col-sm-9 pb-3">
                     <div class="video-wrapper">
                         <iframe 
                             src="https://www.youtube.com/embed/M8KRue0HvQA?si=wZnniU7ZzR-N9V2q"
@@ -344,7 +355,17 @@
                         </iframe>  
                     </div>
                 </div>
-                <div class="video col-5 pb-2">
+                <div class="video col-6 col-lg-4 col-md-6 col-sm-9 pb-3">
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://www.youtube.com/embed/M8KRue0HvQA?si=wZnniU7ZzR-N9V2q"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <div class="video col-6 col-lg-4 col-md-6 col-sm-9  pb-3">
                     <div class="video-wrapper">
                         <iframe 
                             src="https://www.youtube.com/embed/M8KRue0HvQA?si=wZnniU7ZzR-N9V2q"

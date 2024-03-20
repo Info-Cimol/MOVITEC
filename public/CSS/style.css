@@ -6,15 +6,15 @@
 }
 
 body{
-    padding-top: 56px;
-    background-color: #6392ff;
+    padding-top: 70px;
 }
 
 main{
     font-size: 20px;
 }
+
 .navbar{
-    background-color: rgb(22, 22, 82);
+    background-color: rgb(33, 33, 227);
 }
 
 nav{
@@ -40,6 +40,22 @@ p {
     margin-bottom: 0.5rem;
 }
 
+p:hover{
+    color:#0c008b;
+    text-shadow: 4px 4px 9px #070f1f;
+    padding: 1px 1px;
+}
+
+li:hover{
+    color: #001d57;
+    font-weight: 600;
+}
+
+.nav-item{
+    color: #0042c7;
+    font-weight: 700;
+}
+
 ul {
     padding-left: 2rem;
 }
@@ -49,10 +65,13 @@ ul {
     font-weight: 650;
     color: #001498;
 }
-.card-body{
-    background-color: rgba(119, 255, 255, 0.793);
-}
 
+.card-body{
+    background-color: #3758ffca;
+}
+.card-body:hover{
+    background-color: #93b7ff;
+}
 .imgfundo{
     width: 100%;
     min-height: auto;
@@ -77,6 +96,11 @@ ul {
 }
 
 .textoimg h2{
+    text-shadow: 4px 4px 9px rgb(24, 70, 255);
+}
+
+.textoimg h2:hover{
+    font-style: italic;
     text-shadow: 4px 4px 9px rgb(24, 70, 255);
 }
 
@@ -144,4 +168,29 @@ ul {
 
 #inscricoes ul li {
     margin-bottom: 10px; 
+}
+
+.form-container {
+    background-color: #b1d0ff; 
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 139, 0.5); 
+}
+.form-container label {
+    color: #0047b3;
+}
+.form-control {
+    border-color: #0047b3; 
+}
+.form-control:focus {
+    border-color: #002080; 
+    box-shadow: 0 0 0 0.25rem rgba(0, 39, 128, 0.25);
+}
+.btn-primary:hover {
+    background-color: #0052cc;
+    border-color: #0052cc;
+}
+
+.btn-inscricao:hover{
+    border: 5px #0a0098 solid;
 }

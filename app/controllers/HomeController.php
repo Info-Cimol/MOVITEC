@@ -17,4 +17,8 @@ class HomeController{
         view('projetos');
         return $response;
     }
+    public function inscricao(Request $request, Response $response){
+        view('inscrição');
+        return $response;
+    }
 }
