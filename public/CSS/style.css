@@ -68,9 +68,11 @@ ul {
 
 .card-body{
     background-color: #3758ffca;
+    border-radius:20px;
 }
 .card-body:hover{
     background-color: #93b7ff;
+    border-radius:20px;
 }
 .imgfundo{
     width: 100%;

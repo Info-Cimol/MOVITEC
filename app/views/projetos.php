@@ -44,42 +44,103 @@
             <a href="/#estandes" class="row">
                 <i class="bi bi-arrow-left fs-2 col-md-2 col-2"></i>
             </a>
-            <div class="card text-center mb-3">
-                <div class="card-body">
-                    <h5 class="card-title fs-2">Rural Market</h5>
-                    <p class="card-text">O desenvolvimento de um site de divulgação de produtos rurais com o intuito de
-                        auxiliar produtores rurais nas suas vendas</p>
-                    <a href="./midias/Lista E-mail DES.pdf" target="_blank" class="btn btn-primary">Ver PDF do
-                        projeto</a>
-                </div>
-            </div>
-            <div class="card text-center mb-3">
-                <div class="card-body">
-                    <h5 class="card-title fs-2">Rural Market</h5>
-                    <p class="card-text">O desenvolvimento de um site de divulgação de produtos rurais com o intuito de
-                        auxiliar produtores rurais nas suas vendas</p>
-                    <a href="./midias/Lista E-mail DES.pdf" target="_blank" class="btn btn-primary">Ver PDF do
-                        projeto</a>
-                </div>
-            </div>
-            <div class="card text-center mb-3">
-                <div class="card-body">
-                    <h5 class="card-title fs-2">Rural Market</h5>
-                    <p class="card-text">O desenvolvimento de um site de divulgação de produtos rurais com o intuito de
-                        auxiliar produtores rurais nas suas vendas</p>
-                    <a href="./midias/Lista E-mail DES.pdf" target="_blank" class="btn btn-primary">Ver PDF do
-                        projeto</a>
-                </div>
-            </div>
-            <div class="card text-center mb-3">
-                <div class="card-body">
-                    <h5 class="card-title fs-2">Rural Market</h5>
-                    <p class="card-text">O desenvolvimento de um site de divulgação de produtos rurais com o intuito de
-                        auxiliar produtores rurais nas suas vendas</p>
-                    <a href="./midias/Lista E-mail DES.pdf" target="_blank" class="btn btn-primary">Ver PDF do
-                        projeto</a>
-                </div>
-            </div>
+            <div class=" text-center mb-3">
+            <div class="card-body">
+            <?php
+            include 'config.php';
+
+            if (isset($_GET['id'])) {
+                $id_projeto = $_GET['id'];
+
+                $sql = "SELECT * FROM projetos WHERE id = $id_projeto";
+                $resultado = $conexao->query($sql);
+
+                if ($resultado->num_rows > 0) {
+                    $projeto = $resultado->fetch_assoc(); ?>
+
+                    <h5 class="card-title fs-1 p-4"><?php echo $projeto['titulo']; ?></h5>
+                    <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Tema
+                        </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                        <div class="text-center p-2">
+                            <p class="card-text"><?php echo $projeto['tema']; ?></p>
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Problema
+                        </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p class="card-text"><?php echo $projeto['problema']; ?></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Justificativa
+                        </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p class="card-text"><?php echo $projeto['justificativa']; ?></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Objetivos
+                        </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p class="card-text"><?php echo $projeto['objetivos']; ?></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Hipóteses
+                        </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p class="card-text"><?php echo $projeto['hipoteses']; ?></p>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="p-5">
+                    <?php if (!empty($projeto['arquivo_pdf'])): ?>
+                        <p class='card-text'><strong>Arquivo PDF:</strong> <a href="<?php echo $projeto['arquivo_pdf']; ?>" target="_blank">PDF do Projeto</a></p>
+                    <?php else: ?>
+                        <p class='card-text'><strong>Arquivo PDF:</strong> Não disponível</p>
+                    <?php endif; ?>
+                    </div>
+                   
+
+                <?php } else {
+                    echo "Projeto não encontrado.";
+                }
+            } else {
+                echo "ID do projeto não especificado.";
+            }
+
+            $conexao->close();
+            ?>
         </div>
     </main>
 

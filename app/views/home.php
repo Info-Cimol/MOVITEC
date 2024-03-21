@@ -1,8 +1,15 @@
-<?php ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
+<?php
+include 'config.php';
 
+$sql = "SELECT id, titulo, tema FROM projetos";
+$resultado = $conexao->query($sql);
+if ($resultado === false) {
+    die("Erro ao executar a consulta: " . $conexao->error);
+}
+
+?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -274,36 +281,23 @@
         </section>
         <section id="estandes" class="pt-5">
             <h2 class="text-center p-3 fw-bold fs-1 shadow mb-5">Estandes Virtuais</h2>
+            <div class="container mt-5">
             <div class="row justify-content-around">
-                <div class="card text-center mb-3 border-0 " style="width: 18rem;">
-                    <div class="card-body col rounded">
-                        <h5 class="card-title fw-bold">Rural Market</h5>
-                        <p class="card-text">Site de divulgação de produtos rurais.</p>
-                        <a href="/projeto" target="_blank" class="btn btn-primary">Ver o projeto</a>
-                    </div>
-                </div>
-                <div class="card text-center mb-3 border-0 " style="width: 18rem;">
-                    <div class="card-body col rounded">
-                        <h5 class="card-title  fw-bold">Rural Market</h5>
-                        <p class="card-text">Site de divulgação de produtos rurais.</p>
-                        <a href="/projeto" target="_blank" class="btn btn-primary">Ver o projeto</a>
-                    </div>
-                </div>
-                <div class="card text-center mb-3 border-0 " style="width: 18rem;">
-                    <div class="card-body col rounded">
-                        <h5 class="card-title  fw-bold">Rural Market</h5>
-                        <p class="card-text">Site de divulgação de produtos rurais.</p>
-                        <a href="/projeto" target="_blank" class="btn btn-primary">Ver o projeto</a>
-                    </div>
-                </div>
-                <div class="card text-center mb-3 border-0 " style="width: 18rem;">
-                    <div class="card-body col rounded">
-                        <h5 class="card-title  fw-bold">Rural Market</h5>
-                        <p class="card-text">Site de divulgação de produtos rurais.</p>
-                        <a href="/projeto" target="_blank" class="btn btn-primary">Ver o projeto</a>
-                    </div>
-                </div>
-
+            <?php
+            if ($resultado->num_rows > 0) {
+                while ($projeto = $resultado->fetch_assoc()) {
+                    echo "<div class='card text-center mb-3 border-0' style='width: 18rem;'>";
+                    echo "<div class='card-body col rounded'>";
+                    echo "<h5 class='card-title fw-bold'>" . $projeto['titulo'] . "</h5>";
+                    echo "<p class='card-text'><strong>Tema:</strong> " . $projeto['tema'] . "</p>";
+                    echo "<a href='/projeto?id=" . $projeto['id'] . "' class='btn btn-primary'>Ver o Projeto</a>";
+                    echo "</div>";
+                    echo "</div>";
+                }
+            } else {
+                echo "Nenhum projeto encontrado.";
+            }
+            ?>
             </div>
         </section>
 
