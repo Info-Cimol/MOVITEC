@@ -11,5 +11,5 @@ return function(App $app){
     $app->get('/regras', [HomeController::class, 'regras']);
     $app->get('/projeto', [HomeController::class, 'projeto']);
     $app->get('/inscricao', [HomeController::class, 'inscricao']);
-    
+    $app->get('/tarefa', [HomeController::class, 'cadastro_tarefa']);
 };

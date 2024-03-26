@@ -1,11 +1,13 @@
 <?php ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
-
+<?php include 'config.php';
+$sql = "SELECT * FROM projetos";
+$resultado = $conexao->query($sql);?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Regras e critérios da MOVITEC</title>
+    <title>MIC</title>
     <link rel="stylesheet" href="CSS/style.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -15,7 +17,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-white text-white fixed-top ">
         <div class="container">
-            <a class="navbar-brand text-white" href="/">MOVITEC</a>
+            <a class="navbar-brand text-white" href="/">MIC</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -40,29 +42,27 @@
     </nav>
     <main class="container">
         <div>
-            <h2 class="text-center p-3 fw-bold fs-1 shadow mb-5">Estandes Virtuais</h2>
+        <?php
+
+        if (isset($_GET['id'])) {
+            $id_projeto = $_GET['id'];
+
+            $sql = "SELECT * FROM projetos WHERE id = $id_projeto";
+            $resultado = $conexao->query($sql);
+
+            if ($resultado->num_rows > 0) {
+                $projeto = $resultado->fetch_assoc(); ?>
+
+            <h2 class="text-center p-3 fw-bold fs-1 shadow mb-5"><?php echo $projeto['titulo']; ?></h2>
             <a href="/#estandes" class="row">
                 <i class="bi bi-arrow-left fs-2 col-md-2 col-2"></i>
             </a>
             <div class=" text-center mb-3">
             <div class="card-body">
-            <?php
-            include 'config.php';
-
-            if (isset($_GET['id'])) {
-                $id_projeto = $_GET['id'];
-
-                $sql = "SELECT * FROM projetos WHERE id = $id_projeto";
-                $resultado = $conexao->query($sql);
-
-                if ($resultado->num_rows > 0) {
-                    $projeto = $resultado->fetch_assoc(); ?>
-
-                    <h5 class="card-title fs-1 p-4"><?php echo $projeto['titulo']; ?></h5>
-                    <div class="accordion" id="accordionExample">
+                    <div class="accordion p-5" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <button class="accordion-button text-primary fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             Tema
                         </button>
                         </h2>
@@ -76,54 +76,67 @@
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <button class="accordion-button collapsed text-primary fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                             Problema
                         </button>
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <p class="card-text"><?php echo $projeto['problema']; ?></p>
+                            <p class="card-text p-4"><?php echo $projeto['problema']; ?></p>
                         </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <button class="accordion-button collapsed text-primary fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                             Justificativa
                         </button>
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <p class="card-text"><?php echo $projeto['justificativa']; ?></p>
+                            <p class="card-text p-4"><?php echo $projeto['justificativa']; ?></p>
                         </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        <button class="accordion-button collapsed text-primary fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                             Objetivos
                         </button>
                         </h2>
                         <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <p class="card-text"><?php echo $projeto['objetivos']; ?></p>
+                            <p class="card-text p-4"><?php echo $projeto['objetivos']; ?></p>
                         </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        <button class="accordion-button collapsed  text-primary fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                             Hipóteses
                         </button>
                         </h2>
                         <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <p class="card-text"><?php echo $projeto['hipoteses']; ?></p>
+                            <p class="card-text p-4"><?php echo $projeto['hipoteses']; ?></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button collapsed text-primary fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            Resumo do Projeto
+                        </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p class="card-text p-4"><?php echo $projeto['resumo']; ?></p>
                         </div>
                         </div>
                     </div>
                     </div>
-                    <div class="p-5">
+
+                    <div class="pb-3">
                     <?php if (!empty($projeto['arquivo_pdf'])): ?>
                         <p class='card-text'><strong>Arquivo PDF:</strong> <a href="<?php echo $projeto['arquivo_pdf']; ?>" target="_blank">PDF do Projeto</a></p>
                     <?php else: ?>

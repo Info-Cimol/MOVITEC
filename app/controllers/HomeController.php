@@ -21,4 +21,8 @@ class HomeController{
         view('inscrição');
         return $response;
     }
+    public function cadastro_tarefa(Request $request, Response $response){
+        view('tarefa');
+        return $response;
+    }
 }

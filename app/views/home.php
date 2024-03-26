@@ -13,7 +13,7 @@ if ($resultado === false) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MOVITEC</title>
+    <title>FIC</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -22,7 +22,7 @@ if ($resultado === false) {
 <body>
     <nav class="navbar navbar-expand-lg navbar-white text-white fixed-top ">
         <div class="container">
-            <a class="navbar-brand text-white" href="/">MOVITEC</a>
+            <a class="navbar-brand  me-5 text-white" href="/"><img class="logo" width="130" src="/midias/MIC.jpg" alt="LOGO"></a>
             <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -40,27 +40,39 @@ if ($resultado === false) {
                     <li class="nav-item">
                         <a class="nav-link text-white" href="#tutoriais" onclick="closeMenu()">Tutoriais</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/tarefa" onclick="closeMenu()">Tarefas</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <main class="container">
-        <div class="containerimg p-4">
-            <img class="imgfundo text-bg-primary" src="./midias/tecnologia.jpg" alt="">
-            <div class="textoimg">
-                <h2 class="fs-2 fw-bold text-white ">Mostra Virtual Tecnológica</h2>
-                <h3 class="fs-3 fw-bold text-info">Prepare-se para a MOVITEC 2024!</h3>
-                <p>Submissões de trabalhos: de 6 a 11 de maio</p>
-            </div>
+    <main class="container pt-5">
+        <div>
+            <?php
+            if (isset($_GET['sucesso']) && $_GET['sucesso'] == 'inserido') {
+                echo '<div class="alert alert-success" role="alert">Tarefa inserida com sucesso!</div>';
+            }
+            ?>
+            <?php
+            if (isset($_GET['sucess']) && $_GET['sucess'] == 'inserido') {
+                echo '<div class="alert alert-success" role="alert">Projeto inserido com sucesso!</div>';
+            }
+            ?>
         </div>
+        <div class="containerimg p-4">
+            <img class="imgfundo text-bg-primary" src="./midias/MIC.jpg" alt="">
+            
+        </div>
+       
         <section id="regulamentos">
             <div class="container">
                 <h2 class="text-center p-3 fw-bold fs-1 shadow mb-5">Regulamentos</h2>
                 <h3 class="text-primary text-center">Cadastro e Submissão de projetos</h3>
-                <p class="text-justify">1. Podem submeter projetos para a <strong>Mostra virtual tecnológica</strong>
+                <p class="text-justify">1. Podem submeter projetos para a <strong>Feira de Iniciação Científica</strong>
                     estudantes do curso técnico em informática da Escola Técnica Estadual Monteiro Lobato.</p>
                 <p class="text-justify">2. A submissão de trabalho é gratuita e deverá ser feita até a data limite
-                    publicada no Cronograma da Mostra virtual tecnológica.</p>
+                    publicada no Cronograma da Feira de Iniciação Científica.</p>
                     <div class="row justify-content-center">
                     <div class="video col-8 pb-2">
                         <div class="video-wrapper">
@@ -72,9 +84,9 @@ if ($resultado === false) {
                             </iframe>  
                         </div>
                     </div>
-                <p>3. Cada estudante da Mostra virtual tecnológica pode inscrever apenas UM projeto de sua autoria. É
+                <p>3. Cada estudante da Feira de Iniciação Científica pode inscrever apenas UM projeto de sua autoria. É
                     obrigatória a presença de pelo menos um autor do trabalho no momento da videoconferência para
-                    avaliação que acontece durante a Mostra virtual tecnológica.</p>
+                    avaliação que acontece durante a Feira de Iniciação Científica.</p>
                 <p class="text-justify">4. Os projetos com duração superior a 12 meses, devem informar no ato da
                     inscrição que se tratam de “Projetos de Continuidade do ano anterior”. O início da pesquisa de campo
                     ou da fase experimental ou de prototipagem deverá ser considerado como data inicial do projeto.</p>
@@ -86,13 +98,13 @@ if ($resultado === false) {
                 </ul>
                 <p class="text-justify">5. Sobre a ORIGINALIDADE E AUTORIA PRÓPRIA dos trabalhos.</p>
                 <ul class="text-justify">
-                    <li>Todo trabalho aprovado para participação na Mostra virtual tecnológica deve ser original, de única e exclusiva autoria das pessoas relacionadas no ato da inscrição e não se tratar de cópia integral ou parcial de textos e trabalhos de autoria de outrem, seja em formato de papel, eletrônico, digital, audiovisual ou qualquer outro meio.</li>
-                    <li>Os autores ao inscreverem seus trabalhos na Mostra virtual tecnológica assumem ter total conhecimento e compreensão do que é considerado plágio, não apenas a cópia integral do trabalho, mas também parte dele, inclusive de artigos e/ou parágrafos, sem citação do autor ou de sua fonte.</li>
+                    <li>Todo trabalho aprovado para participação na Feira de Iniciação Científica deve ser original, de única e exclusiva autoria das pessoas relacionadas no ato da inscrição e não se tratar de cópia integral ou parcial de textos e trabalhos de autoria de outrem, seja em formato de papel, eletrônico, digital, audiovisual ou qualquer outro meio.</li>
+                    <li>Os autores ao inscreverem seus trabalhos na Feira de Iniciação Científica assumem ter total conhecimento e compreensão do que é considerado plágio, não apenas a cópia integral do trabalho, mas também parte dele, inclusive de artigos e/ou parágrafos, sem citação do autor ou de sua fonte.</li>
                     <li>Trabalhos que possuam conteúdos copiados sem as devidas referências serão desclassificados por plágio.</li>
                 </ul>
                 <p class="text-justify">6. Orientadores podem participar de múltiplos projetos. O orientador deve ser professor ativo na Escola Técnica Estadual Monteiro Lobato para assumir a orientação do projeto, preferencialmente com formação na área do tema do projeto.</p>
-                <p>7. Na inscrição dos trabalhos é necessário inserir um resumo da pesquisa contendo OBRIGATORIAMENTE entre 1500 e 2000 caracteres com espaço. Todos os projetos apresentados na Mostra virtual tecnológica terão seus resumos publicados nos Anais do evento.</p>                
-                <p>8. Para a mostra virtual todos os trabalhos deverão elaborar um pôster científico/banner virtual no formato indicado pela Mostra virtual tecnológica. Este item ficará disponível para visitação pública virtual e será considerado durante a avaliação dos trabalhos pela comissão de avaliadores.</p>
+                <p>7. Na inscrição dos trabalhos é necessário inserir um resumo da pesquisa contendo OBRIGATORIAMENTE entre 1500 e 2000 caracteres com espaço. Todos os projetos apresentados na Feira de Iniciação Científica terão seus resumos publicados nos Anais do evento.</p>                
+                <p>8. Para a mostra virtual todos os trabalhos deverão elaborar um pôster científico/banner virtual no formato indicado pela Feira de Iniciação Científica. Este item ficará disponível para visitação pública virtual e será considerado durante a avaliação dos trabalhos pela comissão de avaliadores.</p>
                 <p>9. Para a mostra virtual todos os trabalhos deverão elaborar um Vídeo com a explicação do trabalho. Este item ficará disponível para visitação pública virtual e será considerado durante a avaliação dos trabalhos pela comissão de avaliadores.</p>
                 <p>10. Para a mostra virtual todos os trabalhos deverão elaborar um Relatório científico do trabalho. Este item ficará disponível para visitação pública virtual e será considerado durante a avaliação dos trabalhos pela comissão de avaliadores.</p>
                 <p>11. É opcional a apresentação do Plano de pesquisa e Diário de bordo.</p>
@@ -107,12 +119,12 @@ if ($resultado === false) {
                     <li>Ciências Humanas</li>
                     <li>Linguística, Letras e Artes</li>
                 </ul>
-                <p>13. Todos os trabalhos devem preencher a aba: “Ética e segurança”, disponível no site Mostra virtual tecnológica durante a submissão. Projetos que envolvam experimentação em seres humanos, animais vertebrados, agentes biológicos devem observar todas as exigências legais para esse tipo de pesquisa conforme as normas estabelecidas pela legislação brasileira e internacional. Tais trabalhos necessitarão receber parecer de recomendação do CRC da Mostra virtual tecnológica no que se refere à aspectos éticos e segurança. Sem esse parecer o trabalho terá a inscrição indeferida. Ver informações em Ética e segurança.</p>
+                <p>13. Todos os trabalhos devem preencher a aba: “Ética e segurança”, disponível no site Feira de Iniciação Científica durante a submissão. Projetos que envolvam experimentação em seres humanos, animais vertebrados, agentes biológicos devem observar todas as exigências legais para esse tipo de pesquisa conforme as normas estabelecidas pela legislação brasileira e internacional. Tais trabalhos necessitarão receber parecer de recomendação do CRC da Feira de Iniciação Científica no que se refere à aspectos éticos e segurança. Sem esse parecer o trabalho terá a inscrição indeferida. Ver informações em Ética e segurança.</p>
                 <p>14. São avaliados apenas projetos que apresentem todos os dados e documentos exigidos. Aqueles que não estejam de acordo com estas regras serão desclassificados.</p>
-                <p>15. Serão selecionados cerca de 75 trabalhos para participarem da  Mostra virtual tecnológica no ano vigente. A seleção acontecerá através de bancas de avaliação compostas por pesquisadores convidados com reputação, experiência e formação acadêmica superior coerente à área científica das pesquisas.</p>
-                <p>16. Os projetos selecionados para participarem da Mostra virtual tecnológica são anunciados na sua página oficial na data divulgada no Cronograma da feira.</p>
+                <p>15. Serão selecionados cerca de 75 trabalhos para participarem da  Feira de Iniciação Científica no ano vigente. A seleção acontecerá através de bancas de avaliação compostas por pesquisadores convidados com reputação, experiência e formação acadêmica superior coerente à área científica das pesquisas.</p>
+                <p>16. Os projetos selecionados para participarem da Feira de Iniciação Científica são anunciados na sua página oficial na data divulgada no Cronograma da feira.</p>
                 <p>17. A apresentação do projeto deve ser realizada pelo(s) estudante(s) autor(es). O orientador ou o coorientador não poderão apresentar o projeto no lugar dos estudantes.</p>
-                <p>18. Na mostra de trabalhos virtual e nas videoconferências de avaliação dos trabalhos (detalhes em Processos de Avaliação dos projetos na Mostra virtual tecnológica)  por um Comitê de Avaliação que julgará os seguintes critérios:</p>
+                <p>18. Na mostra de trabalhos virtual e nas videoconferências de avaliação dos trabalhos (detalhes em Processos de Avaliação dos projetos na Feira de Iniciação Científica)  por um Comitê de Avaliação que julgará os seguintes critérios:</p>
                 <ul>
                     <li>Atitudes;</li>
                     <li>Habilidades;</li>
@@ -123,21 +135,21 @@ if ($resultado === false) {
                     <li>Pôster;</li>
                     <li>Interação durante a apresentação oral.</li>
                 </ul>
-                <p>19. A Mostra virtual tecnológica não se responsabilizará por problemas técnicos e operacionais envolvendo tecnologias de informação e interação que impedirem estudantes de finalizarem suas inscrições/cadastros/submissões ou de se conectarem às atividades da Mostra virtual tecnológica. Ressaltamos, porém, que todo cuidado e respeito à diversidade de acesso referente à inclusão digital serão devidamente considerados para sanar problemas e dúvidas. </p>
-                <p>20. Com base nas avaliações do Comitê de Avaliação, a organização da Mostra virtual tecnológica atribuirá premiações diversas. Os projetos desenvolvidos individualmente ou em grupo competem juntos dentro de suas categorias.</p>
+                <p>19. A Feira de Iniciação Científica não se responsabilizará por problemas técnicos e operacionais envolvendo tecnologias de informação e interação que impedirem estudantes de finalizarem suas inscrições/cadastros/submissões ou de se conectarem às atividades da Feira de Iniciação Científica. Ressaltamos, porém, que todo cuidado e respeito à diversidade de acesso referente à inclusão digital serão devidamente considerados para sanar problemas e dúvidas. </p>
+                <p>20. Com base nas avaliações do Comitê de Avaliação, a organização da Feira de Iniciação Científica atribuirá premiações diversas. Os projetos desenvolvidos individualmente ou em grupo competem juntos dentro de suas categorias.</p>
                 <p>21. As premiações serão conferidas aos trabalhos conforme as regras específicas conforme disponível em política de premiações.</p>
                 <p>22. Quanto aos direitos Intelectuais (Autorais, Imagens, Marcas e afins)</p>
                 <ul>
-                    <li>Os expositores ao inscreverem os trabalhos na Mostra virtual tecnológica assumem ter total conhecimento e compreensão de que estão autorizando a utilização de quaisquer direitos intelectuais (autorais, imagem, marca e afins) relativos a obras literárias, artísticas ou científicas, obras audiovisuais, textos de palestras, fotografias etc., conteúdos, direitos de personalidade, interpretações, execuções, marcas, sinais distintivos, a qualquer título, de suas autorias ou propriedade, relacionados ao evento na proporção e extensão de suas respectivas criações e participações.</li>
-                    <li>Os expositores ao inscreverem os trabalhos na Mostra virtual tecnológica assumem ter total conhecimento e compreensão de que estão autorizando o uso do seus nomes, depoimentos e  imagens (fotos e voz), incluindo fotos e vídeos enviados por estes à Mostra virtual tecnológica, para fins de pesquisa, eventos, divulgações, propagandas e retrospectivas relacionadas ao referido evento da MOVITEC e seus colaboradores, patrocinadores, atendendo às mesmas finalidades do parágrafo anterior, a título gratuito e por tempo indeterminado. As imagens/ fotografias e sons poderão ser fixados, reproduzidos e modificados com qualquer meio técnico. Poderão ser reproduzidas parcialmente ou na sua totalidade em qualquer suporte (papel, digital, magnético, tecido, plástico, etc.) e integradas a qualquer outro material (fotografia, desenho, ilustração, pintura, vídeo, animação, etc.) conhecido ou que venha a existir no futuro.</li>
-                    <li>Os expositores ao inscreverem os trabalhos na Mostra virtual tecnológica assumem ter total conhecimento e compreensão de que estão autorizando as descrições citadas nos parágrafos acima a título gratuito, sem que seja devida qualquer remuneração e por tempo indeterminado, podendo ser explorados em qualquer parte do mundo e em todos os ramos (publicidade, edição, imprensa, design, etc.).</li>
-                    <li>Os organizadores/responsáveis pela Mostra virtual tecnológica são isentos de de quaisquer responsabilidades acerca de qualquer direito demandado relativo a autorizações de Direitos Intelectuais, inclusive quanto a eventuais reclamações de terceiros interessados, valendo a mesma exclusivamente para o evento supracitado e, posteriormente, aos materiais eventualmente veiculados e atrelados ao mesmo.</li>
-                    <li>Todos os estudantes, orientadores e coorientadores participantes da Mostra virtual tecnológica, obrigatoriamente,  deverão preencher, on-line, uma Autorização para uso de Direitos Intelectuais (autorais, imagem, marca e afins).</li>
+                    <li>Os expositores ao inscreverem os trabalhos na Feira de Iniciação Científica assumem ter total conhecimento e compreensão de que estão autorizando a utilização de quaisquer direitos intelectuais (autorais, imagem, marca e afins) relativos a obras literárias, artísticas ou científicas, obras audiovisuais, textos de palestras, fotografias etc., conteúdos, direitos de personalidade, interpretações, execuções, marcas, sinais distintivos, a qualquer título, de suas autorias ou propriedade, relacionados ao evento na proporção e extensão de suas respectivas criações e participações.</li>
+                    <li>Os expositores ao inscreverem os trabalhos na Feira de Iniciação Científica assumem ter total conhecimento e compreensão de que estão autorizando o uso do seus nomes, depoimentos e  imagens (fotos e voz), incluindo fotos e vídeos enviados por estes à Feira de Iniciação Científica, para fins de pesquisa, eventos, divulgações, propagandas e retrospectivas relacionadas ao referido evento da FIC e seus colaboradores, patrocinadores, atendendo às mesmas finalidades do parágrafo anterior, a título gratuito e por tempo indeterminado. As imagens/ fotografias e sons poderão ser fixados, reproduzidos e modificados com qualquer meio técnico. Poderão ser reproduzidas parcialmente ou na sua totalidade em qualquer suporte (papel, digital, magnético, tecido, plástico, etc.) e integradas a qualquer outro material (fotografia, desenho, ilustração, pintura, vídeo, animação, etc.) conhecido ou que venha a existir no futuro.</li>
+                    <li>Os expositores ao inscreverem os trabalhos na Feira de Iniciação Científica assumem ter total conhecimento e compreensão de que estão autorizando as descrições citadas nos parágrafos acima a título gratuito, sem que seja devida qualquer remuneração e por tempo indeterminado, podendo ser explorados em qualquer parte do mundo e em todos os ramos (publicidade, edição, imprensa, design, etc.).</li>
+                    <li>Os organizadores/responsáveis pela Feira de Iniciação Científica são isentos de de quaisquer responsabilidades acerca de qualquer direito demandado relativo a autorizações de Direitos Intelectuais, inclusive quanto a eventuais reclamações de terceiros interessados, valendo a mesma exclusivamente para o evento supracitado e, posteriormente, aos materiais eventualmente veiculados e atrelados ao mesmo.</li>
+                    <li>Todos os estudantes, orientadores e coorientadores participantes da Feira de Iniciação Científica, obrigatoriamente,  deverão preencher, on-line, uma Autorização para uso de Direitos Intelectuais (autorais, imagem, marca e afins).</li>
                 </ul>
                 <p>23. Em nenhuma situação, caberá recurso  quanto aos processos de avaliação conduzidos.</p>
-                <p>24. Quanto ao feedback dos processos avaliativos informamos que tanto na etapa de pré-avaliação, que acontece para selecionar os trabalhos participantes, quanto na etapa de avaliação, que acontece  para destacar  os trabalhos que serão reconhecidos através das premiações conferidas na cerimônia de premiação, a Mostra virtual tecnológica praticará o prazo de 60 dias úteis para o envio dos resultados para os autores sobre a avaliação que foi conduzida pela comissão avaliadora. Observar os processos avaliativos na página: Avaliação. O feedback fica disponível no no site Mostra virtual tecnológica. </p>
-                <p>25. Todos os participantes devem ler e concordar com a política de privacidade da Mostra virtual tecnológica como pré-requisito para sua inscrição. Todos os participantes devem se  cadastrar durante a submissão do projeto e não é permitida a troca, alteração ou inclusão de participantes após a submissão do projeto.</p>
-                <p>26. A organização da Mostra virtual tecnológica se reserva no direito de modificar ou ajustar, a qualquer momento, as regras acima.</p>
+                <p>24. Quanto ao feedback dos processos avaliativos informamos que tanto na etapa de pré-avaliação, que acontece para selecionar os trabalhos participantes, quanto na etapa de avaliação, que acontece  para destacar  os trabalhos que serão reconhecidos através das premiações conferidas na cerimônia de premiação, a Feira de Iniciação Científica praticará o prazo de 60 dias úteis para o envio dos resultados para os autores sobre a avaliação que foi conduzida pela comissão avaliadora. Observar os processos avaliativos na página: Avaliação. O feedback fica disponível no no site Feira de Iniciação Científica. </p>
+                <p>25. Todos os participantes devem ler e concordar com a política de privacidade da Feira de Iniciação Científica como pré-requisito para sua inscrição. Todos os participantes devem se  cadastrar durante a submissão do projeto e não é permitida a troca, alteração ou inclusão de participantes após a submissão do projeto.</p>
+                <p>26. A organização da Feira de Iniciação Científica se reserva no direito de modificar ou ajustar, a qualquer momento, as regras acima.</p>
                 
                 <h3 class="text-primary text-center p-2 fw-bold">Passo a passo para seu projeto na Mostra Virtual de Tecnologia
                     Digital
@@ -168,7 +180,7 @@ if ($resultado === false) {
                         regulamento.</p>
                 </div>
                 <div class="pb-3">
-                    <a href="regras"><button class="btn btn-primary text-center">Regras MOVITEC</button></a>
+                    <a href="regras"><button class="btn btn-primary text-center">Regras FIC</button></a>
                 </div>
                 <div>
                     <h5 class="passo"><span class="text-primary">4.</span> Organize o caderno de campo</h5>
@@ -287,9 +299,9 @@ if ($resultado === false) {
             if ($resultado->num_rows > 0) {
                 while ($projeto = $resultado->fetch_assoc()) {
                     echo "<div class='card text-center mb-3 border-0' style='width: 18rem;'>";
-                    echo "<div class='card-body col rounded'>";
-                    echo "<h5 class='card-title fw-bold'>" . $projeto['titulo'] . "</h5>";
-                    echo "<p class='card-text'><strong>Tema:</strong> " . $projeto['tema'] . "</p>";
+                    echo "<div class='card-body cardprojeto align-middle col rounded'>";
+                    echo "<h5 class='card-title pt-3 fw-bold'>" . $projeto['titulo'] . "</h5>";
+                    echo "<p class='card-text temacard'>" . $projeto['tema'] . "</p>";
                     echo "<a href='/projeto?id=" . $projeto['id'] . "' class='btn btn-primary'>Ver o Projeto</a>";
                     echo "</div>";
                     echo "</div>";
@@ -380,6 +392,10 @@ if ($resultado === false) {
         function closeMenu() {
             $(".navbar-collapse").collapse('hide');
         }
+        setTimeout(function() {
+            document.querySelector('.alert').remove();
+        }, 5000);
+</script>
     </script>
 </body>
 

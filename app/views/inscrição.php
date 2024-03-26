@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MOVITEC</title>
+    <title>MIC</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -15,7 +15,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-white text-white fixed-top ">
         <div class="container">
-            <a class="navbar-brand text-white" href="/">MOVITEC</a>
+            <a class="navbar-brand text-white" href="/">MIC</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -40,7 +40,7 @@
     </nav>
     <main>
         <div>
-            <h2 class="text-center fw-bold p-5">Inscrições para a MOVITEC 2024</h2>
+            <h2 class="text-center fw-bold p-5">Inscrições para a MIC 2024</h2>
         </div>
         <div class="container mt-5 text-center col-md-6 col col-sm-10 justify-content-center align-items-center">
             <div class="form-container ">
@@ -55,19 +55,23 @@
                     </div>
                     <div class="mb-3">
                         <label for="problema" class="form-label">Problema:</label>
-                        <textarea id="problema" name="problema" class="form-control" rows="4" required></textarea>
+                        <textarea id="problema" name="problema" class="form-control" rows="3" required></textarea>
                     </div>
                     <div class="mb-3">
                         <label for="justificativa" class="form-label">Justificativa:</label>
-                        <textarea id="justificativa" name="justificativa" class="form-control" rows="4" required></textarea>
+                        <textarea id="justificativa" name="justificativa" class="form-control" required></textarea>
                     </div>
                     <div class="mb-3">
                         <label for="objetivos" class="form-label">Objetivos:</label>
-                        <textarea id="objetivos" name="objetivos" class="form-control" rows="4" required></textarea>
+                        <textarea id="objetivos" name="objetivos" class="form-control" rows="10" required></textarea>
                     </div>
                     <div class="mb-3">
                         <label for="hipoteses" class="form-label">Hipóteses:</label>
-                        <textarea id="hipoteses" name="hipoteses" class="form-control" rows="4" required></textarea>
+                        <textarea id="hipoteses" name="hipoteses" class="form-control" rows="8" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="resumo" class="form-label">Resumo</label>
+                        <textarea id="resumo" name="resumo" class="form-control" rows="10" required></textarea>
                     </div>
                     <div class="mb-3">
                         <label for="projeto_pdf" class="form-label">Projeto em PDF:</label>

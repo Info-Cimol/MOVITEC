@@ -6,11 +6,14 @@
 }
 
 body{
-    padding-top: 70px;
+    padding-top: 90px;
 }
 
 main{
     font-size: 20px;
+}
+.logo{
+    border-radius: 15px;
 }
 
 .navbar{
@@ -69,15 +72,24 @@ ul {
 .card-body{
     background-color: #3758ffca;
     border-radius:20px;
+    align-items: center;
 }
 .card-body:hover{
     background-color: #93b7ff;
     border-radius:20px;
 }
+.cardprojeto{
+    height: 250px;
+    
+}
+.temacard{
+    margin-top: 2vh;
+    height: 90px;
+    overflow: hidden;
+}
 .imgfundo{
     width: 100%;
-    min-height: auto;
-    opacity: 0.5;
+    height: auto;
 }
 
 .containerimg{
@@ -94,7 +106,7 @@ ul {
 }
 
 .containerimg img{
-    border-radius: 20px;
+    border-radius: 50px;
 }
 
 .textoimg h2{

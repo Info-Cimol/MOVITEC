@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $justificativa = $_POST["justificativa"];
     $objetivos = $_POST["objetivos"];
     $hipoteses = $_POST["hipoteses"];
-    
+    $resumo = $_POST["resumo"];
     $target_dir = "uploads/";
     $target_file = $target_dir . basename($_FILES["projeto_pdf"]["name"]);
     $uploadOk = 1;
@@ -22,8 +22,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($uploadOk != 0 && move_uploaded_file($_FILES["projeto_pdf"]["tmp_name"], $target_file)) {
        
         $arquivo_pdf = $target_file;
-        $sql = "INSERT INTO projetos (titulo, tema, problema, justificativa, objetivos, hipoteses, arquivo_pdf) 
-                VALUES ('$titulo','$tema', '$problema', '$justificativa', '$objetivos', '$hipoteses', '$arquivo_pdf')";
+        $sql = "INSERT INTO projetos (titulo, tema, problema, justificativa, objetivos, hipoteses,resumo, arquivo_pdf) 
+                VALUES ('$titulo','$tema', '$problema', '$justificativa', '$objetivos', '$hipoteses','$resumo', '$arquivo_pdf')";
         
         if ($conexao->query($sql) === TRUE) {
             echo "Os dados foram inseridos no banco de dados com sucesso.";
@@ -34,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Ocorreu um erro ao fazer o upload do arquivo.";
     }
 
+    header("Location:/?sucess=inserido");
     $conexao->close();
 } else {
     header("Location: projetos.php");
