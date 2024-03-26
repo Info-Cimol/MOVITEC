@@ -34,6 +34,9 @@
                     <li class="nav-item">
                         <a class="nav-link text-white" href="/#tutoriais" onclick="closeMenu()">Tutoriais</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/tarefa" onclick="closeMenu()">Tarefas</a>
+                    </li>
                 </ul>
             </div>
         </div>

@@ -6,6 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $descricao = $_POST["descricao"];
     $status = $_POST["status"];
     
+    
     echo "<div>Título: " . $titulo . "</div>";
     echo "<div>Descrição: " . $descricao . "</div>";
     echo "<div>Status: " . $status . "</div>";
@@ -14,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt = $conexao->prepare($sql);
     
     if (!$stmt) {
-        echo "<div>Erro na preparação da consulta: " . $conn->error . "</div>";
+        echo "<div>Erro na preparação da consulta: " . $conexao->error . "</div>";
         exit();
     }
     
