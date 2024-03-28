@@ -19,7 +19,7 @@ class HomeController{
         return $response;
     }
     public function inscricao(Request $request, Response $response){
-        view('inscrição');
+        view('inscricao');
         return $response;
     }
     public function cadastro_tarefa(Request $request, Response $response){
