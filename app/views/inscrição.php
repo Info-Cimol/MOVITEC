@@ -15,9 +15,8 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-white text-white fixed-top ">
         <div class="container">
-            <a class="navbar-brand text-white" href="/">MIC</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand  me-5 text-white" href="/"><img class="logo" width="130" src="/midias/MIC.jpg" alt="LOGO"></a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -29,7 +28,7 @@
                         <a class="nav-link text-white" href="/#estandes" onclick="closeMenu()">Estandes Virtuais</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="/#inscricoes" onclick="closeMenu()">Inscrições</a>
+                        <a class="nav-link text-white" href="/#inscricao" onclick="closeMenu()">Inscrições</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="/#tutoriais" onclick="closeMenu()">Tutoriais</a>

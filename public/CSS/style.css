@@ -90,6 +90,7 @@ ul {
 .imgfundo{
     width: 100%;
     height: auto;
+    opacity: 0.5;
 }
 
 .containerimg{
@@ -110,12 +111,14 @@ ul {
 }
 
 .textoimg h2{
-    text-shadow: 4px 4px 9px rgb(24, 70, 255);
+    font-size: 50px;
+    text-shadow: 4px 4px 9px #001c8e;
 }
 
 .textoimg h2:hover{
-    font-style: italic;
-    text-shadow: 4px 4px 9px rgb(24, 70, 255);
+    font-weight: bold;
+    font-size: 50px;
+    text-shadow: 4px 4px 9px rgb(222, 227, 244);
 }
 
 .textoimg h3{

@@ -1,5 +1,5 @@
 <?php
-
+use Dotenv\Dotenv;
 use Slim\Factory\AppFactory;
 
 require "../vendor/autoload.php";
@@ -11,3 +11,4 @@ $routes= require '../app/routes/routes.php';
 
 $routes($app);
 $app->run();
+?>

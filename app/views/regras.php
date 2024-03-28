@@ -27,7 +27,7 @@
                         <a class="nav-link text-white" href="/#estandes" onclick="closeMenu()">Estandes Virtuais</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="/#inscricoes" onclick="closeMenu()">Inscrições</a>
+                        <a class="nav-link text-white" href="/#inscricao" onclick="closeMenu()">Inscrições</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="/#tutoriais" onclick="closeMenu()">Tutoriais</a>
