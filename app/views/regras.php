@@ -13,7 +13,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-white text-white fixed-top ">
         <div class="container">
-            <a class="navbar-brand text-white" href="/">MIC</a>
+            <a class="navbar-brand text-white" href="/"><img class="logo" width="130" src="/midias/MICLOGO.png" alt="LOGO"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -21,16 +21,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav text-center">
                     <li class="nav-item active">
-                        <a class="nav-link text-white" href="/#regulamentos" onclick="closeMenu()">Regulamentos</a>
+                        <a class="nav-link text-white" href="/regulamentos" onclick="closeMenu()">Regulamentos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="/#estandes" onclick="closeMenu()">Estandes Virtuais</a>
+                        <a class="nav-link text-white" href="/estandes" onclick="closeMenu()">Estandes Virtuais</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="/#inscricao" onclick="closeMenu()">Inscrições</a>
+                        <a class="nav-link text-white" href="/inscricao" onclick="closeMenu()">Inscrições</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="/#tutoriais" onclick="closeMenu()">Tutoriais</a>
+                        <a class="nav-link text-white" href="/tutoriais" onclick="closeMenu()">Tutoriais</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="/tarefa" onclick="closeMenu()">Tarefas</a>

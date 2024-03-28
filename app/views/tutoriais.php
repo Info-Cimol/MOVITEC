@@ -22,7 +22,7 @@ if ($resultado === false) {
 <body>
     <nav class="navbar navbar-expand-lg navbar-white text-white fixed-top ">
         <div class="container">
-            <a class="navbar-brand  me-5 text-white" href="/"><img class="logo" width="130" src="/midias/MICLOGO.jpg" alt="LOGO"></a>
+            <a class="navbar-brand  me-5 text-white" href="/"><img class="logo" width="130" src="/midias/MICLOGO.png" alt="LOGO"></a>
             <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -60,13 +60,42 @@ if ($resultado === false) {
             }
             ?>
         </div>
-        <div class="containerimg p-4">
-            <img class="imgfundo text-bg-white" src="./midias/MIC.jpg" alt="">
-            <div class="textoimg">
-                <h2 class="fw-bold">EM BREVE</h2>
+
+        <section id="tutoriais">
+        <h2 class="text-center p-3 fw-bold fs-1 shadow mb-5">Tutoriais</h2>
+            <div class="row justify-content-evenly">
+                <div class="video col-6 col-lg-4 col-md-6 col-sm-9 pb-3">
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://www.youtube.com/embed/M8KRue0HvQA?si=wZnniU7ZzR-N9V2q"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>  
+                    </div>
+                </div>
+                <div class="video col-6 col-lg-4 col-md-6 col-sm-9 pb-3">
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://www.youtube.com/embed/M8KRue0HvQA?si=wZnniU7ZzR-N9V2q"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <div class="video col-6 col-lg-4 col-md-6 col-sm-9  pb-3">
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://www.youtube.com/embed/M8KRue0HvQA?si=wZnniU7ZzR-N9V2q"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
             </div>
-        </div>
-        
+        </section>
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

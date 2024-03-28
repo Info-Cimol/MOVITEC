@@ -6,7 +6,8 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 
 class HomeController{
     public function index(Request $request, Response $response){
-        view('index');
+        $section = isset($args['section']) ? $args['section'] : 'home';
+        view('home', ['section' => $section]);
         return $response;
     }
     public function regras(Request $request, Response $response){
@@ -23,6 +24,14 @@ class HomeController{
     }
     public function cadastro_tarefa(Request $request, Response $response){
         view('tarefa');
+        return $response;
+    }
+    public function estandes(Request $request, Response $response){
+        view('estandes');
+        return $response;
+    }
+    public function tutoriais(Request $request, Response $response){
+        view('tutoriais');
         return $response;
     }
 }
