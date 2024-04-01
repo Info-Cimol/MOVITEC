@@ -10,4 +10,12 @@ class HomeController{
         view('home', ['section' => $section]);
         return $response;
     }
+    public function regras(Request $request, Response $response){
+        view('regras');
+        return $response;
+    }
+    public function tutoriais(Request $request, Response $response){
+        view('tutoriais');
+        return $response;
+    }
 }

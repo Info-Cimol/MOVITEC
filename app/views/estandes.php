@@ -61,7 +61,7 @@ if ($resultado === false) {
             ?>
         </div>
 
-        <section id="estandes" class="pt-5">
+        <section id="estandes" class="pt-2">
             <h2 class="text-center p-3 fw-bold fs-1 shadow mb-5">Estandes Virtuais</h2>
             <div class="container mt-5">
             <div class="row justify-content-around">

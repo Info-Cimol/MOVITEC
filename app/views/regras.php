@@ -70,7 +70,7 @@
                         elementos do projeto que ele desenvolveu e quais partes do projeto são de autoria de outro
                         pesquisador citando as devidas fontes.</li>
                 </ul>
-                <p class="text-justify">5. Sobre a ORIGINALIDADE E AUTORIA PRÓPRIA dos trabalhos.</p>
+                <p class="text-justify pt-1">5. Sobre a ORIGINALIDADE E AUTORIA PRÓPRIA dos trabalhos.</p>
                 <ul class="text-justify">
                     <li>Todo trabalho aprovado para participação na Mostra de Iniciação Científica deve ser original, de única e exclusiva autoria das pessoas relacionadas no ato da inscrição e não se tratar de cópia integral ou parcial de textos e trabalhos de autoria de outrem, seja em formato de papel, eletrônico, digital, audiovisual ou qualquer outro meio.</li>
                     <li>Os autores ao inscreverem seus trabalhos na Mostra de Iniciação Científica assumem ter total conhecimento e compreensão do que é considerado plágio, não apenas a cópia integral do trabalho, mas também parte dele, inclusive de artigos e/ou parágrafos, sem citação do autor ou de sua fonte.</li>
