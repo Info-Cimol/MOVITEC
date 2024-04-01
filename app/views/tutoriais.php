@@ -1,15 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <?php
-include 'config.php';
-
-$sql = "SELECT id, titulo, tema FROM projetos";
-$resultado = $conexao->query($sql);
-if ($resultado === false) {
-    die("Erro ao executar a consulta: " . $conexao->error);
-}
-
-?>
+include 'config.php';?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

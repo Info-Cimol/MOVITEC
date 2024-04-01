@@ -14,6 +14,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $uploadOk = 1;
     $pdfFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
+    $sql = "SELECT id, titulo, tema FROM projetos";
+    $resultado = $conexao->query($sql);
+    if ($resultado === false) {
+    die("Erro ao executar a consulta: " . $conexao->error);
+    }
+
     if($pdfFileType != "pdf") {
         echo "Apenas arquivos PDF são permitidos.";
         $uploadOk = 0;

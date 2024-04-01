@@ -1,9 +1,7 @@
 <?php ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
-<?php include 'config.php';
-$sql = "SELECT * FROM projetos";
-$resultado = $conexao->query($sql);?>
+<?php include 'config.php';?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

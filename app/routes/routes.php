@@ -3,16 +3,21 @@
 use Slim\App;
 
 use app\controllers\HomeController;
-use app\controllers\UserController;
+use app\controllers\InscricaoController;
+use app\controllers\ProjetoController;
+use app\controllers\TarefaController;
+use app\controllers\EstandesController;
+use app\controllers\RegrasController;
+use app\controllers\TutoriaisController;
 
 return function(App $app){
 
     $app->get('/', [HomeController::class, 'index']);
 
-    $app->get('/regulamentos', [HomeController::class, 'regras']);
-    $app->get('/projeto', [HomeController::class, 'projeto']);
-    $app->get('/inscricao', [HomeController::class, 'inscricao']);
-    $app->get('/tarefa', [HomeController::class, 'cadastro_tarefa']);
-    $app->get('/tutoriais', [HomeController::class, 'tutoriais']);
-    $app->get('/estandes', [HomeController::class, 'estandes']);
+    $app->get('/regulamentos', [RegrasController::class, 'regras']);
+    $app->get('/projeto', [ProjetoController::class, 'projeto']);
+    $app->get('/inscricao', [InscricaoController::class, 'inscricao']);
+    $app->get('/tarefa', [TarefaController::class, 'cadastro_tarefa']);
+    $app->get('/tutoriais', [TutoriaisController::class, 'tutoriais']);
+    $app->get('/estandes', [EstandesController::class, 'estandes']);
 };

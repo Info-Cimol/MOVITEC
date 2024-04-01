@@ -2,13 +2,6 @@
 <html lang="pt-br">
 <?php
 include 'config.php';
-
-$sql = "SELECT id, titulo, tema FROM projetos";
-$resultado = $conexao->query($sql);
-if ($resultado === false) {
-    die("Erro ao executar a consulta: " . $conexao->error);
-}
-
 ?>
 <head>
     <meta charset="UTF-8">
@@ -65,6 +58,7 @@ if ($resultado === false) {
             <div class="textoimg">
                 <h2 class=" fw-bold">EM BREVE</h2>
             </div>
+           
         </div>
     </main>
 

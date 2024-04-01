@@ -10,28 +10,4 @@ class HomeController{
         view('home', ['section' => $section]);
         return $response;
     }
-    public function regras(Request $request, Response $response){
-        view('regras');
-        return $response;
-    }
-    public function projeto(Request $request, Response $response){
-        view('projetos');
-        return $response;
-    }
-    public function inscricao(Request $request, Response $response){
-        view('inscricao');
-        return $response;
-    }
-    public function cadastro_tarefa(Request $request, Response $response){
-        view('tarefa');
-        return $response;
-    }
-    public function estandes(Request $request, Response $response){
-        view('estandes');
-        return $response;
-    }
-    public function tutoriais(Request $request, Response $response){
-        view('tutoriais');
-        return $response;
-    }
 }

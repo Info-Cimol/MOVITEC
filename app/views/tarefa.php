@@ -42,7 +42,7 @@
         </div>
         <div class="container mt-2 text-center col-md-6 col col-sm-10 justify-content-center align-items-center">
             <div class="form-container ">
-            <form action="cadastro_tarefa.php" method="post">
+            <form action="./tarefa.php" method="post">
                 <div class="mb-3">
                     <label for="titulo" class="form-label">Título:</label>
                     <input type="text" id="titulo" name="titulo" class="form-control" required>
