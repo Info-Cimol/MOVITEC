@@ -55,7 +55,7 @@ include 'config.php';
             ?>
         </div>
         <div class="containerimg p-4">
-            <img class="imgfundo text-bg-white" src="./midias/MIC.jpg" alt="">
+            <img class="imgfundo text-bg-white" src="./midias/banner.jpg" alt="">
             <div class="textoimg">
                 <h2 class="fw-bold">EM BREVE</h2>
             </div>

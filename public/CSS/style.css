@@ -17,11 +17,12 @@ main{
 }
 
 .navbar{
-    background-color:#027280;
+    background-color:#1B2F49;
 }
 
 nav{
     position: fixed;
+    background-color:#1B2F49;
 }
 
 h2 {
@@ -89,7 +90,6 @@ ul {
 }
 .imgfundo{
     width: 100%;
-    height: auto;
     opacity: 0.5;
 }
 

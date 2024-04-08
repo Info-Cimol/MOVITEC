@@ -40,7 +40,7 @@
         </div>
     </nav>
     <main>
-        <div class="container">
+        <div class="container pt-4">
             <h2 class="text-center p-4">Regras e critérios MIC</h2>
             <ol>
             <p class="text-justify">1. Podem submeter projetos para a <strong>Mostra de Iniciação Científica</strong>

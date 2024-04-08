@@ -44,10 +44,10 @@
         </div>
         <div class="container mt-5 text-center col-md-6 col col-sm-10 justify-content-center align-items-center">
             <div class="form-container ">
-                <form action="projeto.php" method="post" enctype="multipart/form-data">
+                <form action="/projetoo" method="post" enctype="multipart/form-data">
                 <div class="mb-3">
                         <label for="titulo" class="form-label">Título:</label>
-                        <input type="text" id="titulo" name="titulo" class="form-control" required>
+                        <input type="text" id="titulo" name="titulo" class="form-control" max-length=50 required>
                     </div>
                     <div class="mb-3">
                         <label for="tema" class="form-label">Tema:</label>

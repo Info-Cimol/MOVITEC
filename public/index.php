@@ -1,8 +1,10 @@
 <?php
+ini_set('display_errors', 'off');
 use Dotenv\Dotenv;
 use Slim\Factory\AppFactory;
 //use Slim\Views\Twig;
 //use Slim\Views\TwigMiddleware;
+include 'config.php';
 
 require "../vendor/autoload.php";
 require "./bootstrap.php";

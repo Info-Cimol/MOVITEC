@@ -3,12 +3,6 @@
 <?php
 include 'config.php';
 
-$sql = "SELECT id, titulo, tema FROM projetos";
-$resultado = $conexao->query($sql);
-if ($resultado === false) {
-    die("Erro ao executar a consulta: " . $conexao->error);
-}
-
 ?>
 <head>
     <meta charset="UTF-8">
@@ -64,22 +58,22 @@ if ($resultado === false) {
         <section id="estandes" class="pt-2">
             <h2 class="text-center p-3 fw-bold fs-1 shadow mb-5">Estandes Virtuais</h2>
             <div class="container mt-5">
-            <div class="row justify-content-around">
-            <?php
-            if ($resultado->num_rows > 0) {
-                while ($projeto = $resultado->fetch_assoc()) {
-                    echo "<div class='card text-center mb-3 border-0' style='width: 18rem;'>";
-                    echo "<div class='card-body cardprojeto align-middle col rounded'>";
-                    echo "<h5 class='card-title pt-3 fw-bold'>" . $projeto['titulo'] . "</h5>";
-                    echo "<p class='card-text temacard'>" . $projeto['tema'] . "</p>";
-                    echo "<a href='/projeto?id=" . $projeto['id'] . "' class='btn btn-primary'>Ver o Projeto</a>";
-                    echo "</div>";
-                    echo "</div>";
-                }
-            } else {
-                echo "Nenhum projeto encontrado.";
-            }
-            ?>
+            <div class="row  justify-content-around">
+            <?php if (!empty($projetos)): ?>
+                <?php foreach ($projetos as $projeto): ?>
+                    <div class="col-md-4">
+                        <div class=" card border-0 mb-3 text-center" style="height:240px;">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold"><?php echo $projeto['titulo']; ?></h5>
+                                <p class="card-text temacard "><?php echo $projeto['tema']; ?></p>
+                                <a href="/projeto/<?php echo $projeto['id']; ?>" class="btn btn-primary">Ver o Projeto</a>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <p>Nenhum projeto encontrado.</p>
+            <?php endif; ?>
             </div>
         </section>
 
